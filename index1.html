@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout with Unique Images</title>
+    <style>
+       
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        
+        .wrapper {
+            width: 100%;
+            height: 100vh;
+            padding: 50px;
+            display: grid;
+            grid-template-areas:
+                "sec1 sec2 sec3 sec4"
+                "sec1 sec2 sec6 sec4"
+                "sec5 sec2 sec6 sec4";
+            gap: 20px;
+            border: 1px solid #333;
+        }
+
+       
+        .wrapper div {
+            border: 2px solid black;
+            border-radius: 10px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        
+        .sec1 { grid-area: sec1; background-image: url("image/\ -2.jpg"); }
+        .sec2 { grid-area: sec2; background-image: url("image/\ -3.jpg"); }
+        .sec3 { grid-area: sec3; background-image: url("image/\ -4.jpg"); }
+        .sec4 { grid-area: sec4; background-image: url("image/\ .jpg"); }
+        .sec5 { grid-area: sec5; background-image: url("image/dd.jpg"); }
+        .sec6 { grid-area: sec6; background-image: url("image/gremlin\ cat.jpg"); }
+    </style>
+</head>
+
+<body>
+    <!-- Grid with unique images in each cell -->
+    <div class="wrapper">
+        <div class="sec1"></div>
+        <div class="sec2"></div>
+        <div class="sec3"></div>
+        <div class="sec4"></div>
+        <div class="sec5"></div>
+        <div class="sec6"></div>
+    </div>
+</body>
+
+</html>
